@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ليونيل ميسي | الأسطورة الحية</title>
+    <!-- استخدام Tailwind CSS للتصميم -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- خطوط عربية جمالية (Cairo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #0b0f19;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* خلفية الموقع الرئيسية */
+        .hero-bg {
+            background: linear-gradient(to bottom, rgba(11, 15, 25, 0.75), rgba(11, 15, 25, 0.95)), 
+                        url('https://i.ibb.co/JWxBzLJ9/IMG-3476.jpg') no-repeat center center/cover;
+        }
+
+        /* خلفيات العدادات باستخدام الصور المختلفة */
+        .counter-bg-1 {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(11, 15, 25, 0.92)),
+                        url('https://i.ibb.co/V0bTDYDC/IMG-3475.jpg') no-repeat center center/cover;
+            background-blend-mode: overlay;
+        }
+
+        .counter-bg-2 {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(11, 15, 25, 0.92)),
+                        url('https://i.ibb.co/35wpCdsF/IMG-3467.jpg') no-repeat center center/cover;
+            background-blend-mode: overlay;
+        }
+
+        .counter-bg-3 {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(11, 15, 25, 0.92)),
+                        url('https://i.ibb.co/49yJgYK/export-1791404918649.jpg') no-repeat center center/cover;
+            background-blend-mode: overlay;
+        }
+
+        /* تأثير Liquid Glass (الزجاج السائل) محسن */
+        .liquid-glass {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
+        }
+
+        .liquid-glass-card {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .liquid-glass-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: rgba(59, 130, 246, 0.6);
+            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.3);
+        }
+
+        /* أنيميشن انسيابي للصور والبطاقات (نعم، نزول وطلعان ناعم) */
+        @keyframes floatSmooth {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .floating-element {
+            animation: floatSmooth 6s ease-in-out infinite;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-[#0b0f19] text-white">
+
+    <!-- الهيدر الرئيسي -->
+    <header class="fixed top-0 left-0 w-full z-50 liquid-glass border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="text-2xl font-black tracking-wider text-blue-500">GOAT</span>
+                <span class="text-sm tracking-widest text-gray-400">| LIONEL MESSI</span>
+            </div>
+            <nav class="hidden md:flex gap-8 text-sm font-semibold text-gray-300">
+                <a href="#hero" class="hover:text-blue-400 transition">الرئيسية</a>
+                <a href="#achievements" class="hover:text-blue-400 transition">الإنجازات</a>
+                <a href="#counters" class="hover:text-blue-400 transition">العدادات الزمنية</a>
+                <a href="#gallery" class="hover:text-blue-400 transition">المعرض</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- قسم البطل (Hero Section) -->
+    <section id="hero" class="relative min-h-screen hero-bg flex items-center justify-center pt-24 pb-16 px-6">
+        <div class="max-w-5xl mx-auto text-center z-10 reveal">
+            <span class="inline-block px-4 py-1.5 rounded-full liquid-glass text-blue-400 text-sm font-bold mb-6 tracking-widest uppercase">
+                اللاعب الأعظم في تاريخ كرة القدم
+            </span>
+            <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-6 leading-tight">
+                ليونيل أندريس ميسي <span class="text-blue-500">كوتشيتيني</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light">
+                رحلة إعجازية بدأت من سحر الشوارع في روساريو، واكتملت بالمجد العالمي، لتكتب ملحمة كروية خالدة لا تكرر أبداً.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#achievements" class="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-2xl shadow-lg shadow-blue-600/30 transition transform hover:-translate-y-1">
+                    استكشف إنجازات الأسطورة
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم إنجازات الأسطورة -->
+    <section id="achievements" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16 reveal">
+            <h2 class="text-3xl md:text-5xl font-black mb-4">إنجازات وأرقام الأسطورة</h2>
+            <p class="text-gray-400">سجل حافل بالبطولات والأرقام القياسية التي صاغت تاريخ كرة القدم</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="liquid-glass-card p-8 rounded-3xl text-center reveal floating-element">
+                <h3 class="text-4xl md:text-5xl font-black text-blue-500 mb-2">45+</h3>
+                <p class="text-lg font-bold text-gray-200 mb-1">إجمالي البطولات</p>
+                <p class="text-xs text-gray-400">أكثر لاعب تتويجاً بالبطولات الجماعية في تاريخ اللعبة</p>
+            </div>
+
+            <div class="liquid-glass-card p-8 rounded-3xl text-center reveal floating-element" style="animation-delay: 1s;">
+                <h3 class="text-4xl md:text-5xl font-black text-amber-400 mb-2">12</h3>
+                <p class="text-lg font-bold text-gray-200 mb-1">الدوري المحلي</p>
+                <p class="text-xs text-gray-400">ألقاب دوري كبرى مع برشلونة وباريس سان جيرمان</p>
+            </div>
+
+            <div class="liquid-glass-card p-8 rounded-3xl text-center reveal floating-element" style="animation-delay: 2s;">
+                <h3 class="text-4xl md:text-5xl font-black text-purple-400 mb-2">800+</h3>
+                <p class="text-lg font-bold text-gray-200 mb-1">الأهداف الرسمية</p>
+                <p class="text-xs text-gray-400">سجل تهديفي مرعب مع الأندية والمنتخب الوطني</p>
+            </div>
+
+            <div class="liquid-glass-card p-8 rounded-3xl text-center reveal floating-element" style="animation-delay: 3s;">
+                <h3 class="text-4xl md:text-5xl font-black text-emerald-400 mb-2">8</h3>
+                <p class="text-lg font-bold text-gray-200 mb-1">الكرة الذهبية</p>
+                <p class="text-xs text-gray-400">رقم قياسي تاريخي غير مسبوق في الفوز بالبالون دور</p>
+            </div>
+        </div>
+
+        <!-- عبارة ميسي هو اللاعب الأعظم بخط واضح وكبير -->
+        <div class="mt-20 text-center reveal">
+            <div class="liquid-glass inline-block px-10 py-6 rounded-3xl border border-blue-500/30 shadow-2xl">
+                <p class="text-3xl md:text-5xl font-black tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-blue-500">
+                    ميسي هو اللاعب الأعظم
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم العدادات الزمنية -->
+    <section id="counters" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16 reveal">
+            <h2 class="text-3xl md:text-5xl font-black mb-4">زمن الأسطورة بالأرقام</h2>
+            <p class="text-gray-400">عدادات حية تفاعلية تحسب كل لحظة في مسيرة البرغوث الأرجنتيني</p>
+        </div>
+
+        <div class="space-y-12">
+            <!-- العداد الأول: عمر ميسي -->
+            <div class="counter-bg-1 rounded-3xl p-8 md:p-12 border border-blue-500/30 shadow-2xl relative overflow-hidden reveal">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl"></div>
+                <h3 class="text-2xl font-bold mb-6 text-blue-400">
+                    عمر الأسطورة منذ الولادة (24 يونيو 1987)
+                </h3>
+                <div id="age-counter" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center"></div>
+            </div>
+
+            <!-- العداد الثاني: كأس العالم -->
+            <div class="counter-bg-2 rounded-3xl p-8 md:p-12 border border-amber-500/30 shadow-2xl relative overflow-hidden reveal">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl"></div>
+                <h3 class="text-2xl font-bold mb-6 text-amber-400">
+                    الوقت منذ التتويج التاريخي بكأس العالم (18 ديسمبر 2022)
+                </h3>
+                <div id="wc-counter" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center"></div>
+            </div>
+
+            <!-- العداد الثالث: الاعتزال الدولي -->
+            <div class="counter-bg-3 rounded-3xl p-8 md:p-12 border border-purple-500/30 shadow-2xl relative overflow-hidden reveal">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl"></div>
+                <h3 class="text-2xl font-bold mb-6 text-purple-400">
+                    الوقت منذ لحظة الاعتزال الدولي (7 أكتوبر)
+                </h3>
+                <div id="retirement-counter" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم معرض الصور الأسطوري (متضمن كل الصور بما فيها الصورتين الجديدتين) -->
+    <section id="gallery" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16 reveal">
+            <h2 class="text-3xl md:text-5xl font-black mb-4">معرض الخلود الكروي</h2>
+            <p class="text-gray-400">لقطات توثق إرث ليونيل ميسي الخالد</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <div class="liquid-glass-card rounded-3xl overflow-hidden p-3 reveal floating-element">
+                <img src="https://i.ibb.co/MDdSHNBV/IMG-3478.jpg" alt="ميسي" class="w-full h-72 object-cover rounded-2xl mb-3">
+                <div class="p-2 text-center">
+                    <h4 class="font-bold text-sm">لحظات خالدة</h4>
+                </div>
+            </div>
+
+            <div class="liquid-glass-card rounded-3xl overflow-hidden p-3 reveal floating-element" style="animation-delay: 1s;">
+                <img src="https://i.ibb.co/HTn4n7V7/IMG-3477.jpg" alt="ميسي" class="w-full h-72 object-cover rounded-2xl mb-3">
+                <div class="p-2 text-center">
+                    <h4 class="font-bold text-sm">المجد الأرجنتيني</h4>
+                </div>
+            </div>
+
+            <div class="liquid-glass-card rounded-3xl overflow-hidden p-3 reveal floating-element" style="animation-delay: 2s;">
+                <img src="https://i.ibb.co/JWxBzLJ9/IMG-3476.jpg" alt="ميسي الأسطورة" class="w-full h-72 object-cover rounded-2xl mb-3">
+                <div class="p-2 text-center">
+                    <h4 class="font-bold text-sm">اللمسة السحرية</h4>
+                </div>
+            </div>
+
+            <div class="liquid-glass-card rounded-3xl overflow-hidden p-3 reveal floating-element" style="animation-delay: 3s;">
+                <img src="https://i.ibb.co/35wpCdsF/IMG-3467.jpg" alt="ميسي" class="w-full h-72 object-cover rounded-2xl mb-3">
+                <div class="p-2 text-center">
+                    <h4 class="font-bold text-sm">شغف القيادة</h4>
+                </div>
+            </div>
+
+            <div class="liquid-glass-card rounded-3xl overflow-hidden p-3 reveal floating-element" style="animation-delay: 4s;">
+                <img src="https://i.ibb.co/49yJgYK/export-1791404918649.jpg" alt="ميسي الذكريات" class="w-full h-72 object-cover rounded-2xl mb-3">
+                <div class="p-2 text-center">
+                    <h4 class="font-bold text-sm">الأسطورة الحية</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="py-8 text-center text-sm text-gray-500 border-t border-white/10 liquid-glass">
+        <p>صُمم خصيصاً للاحتفال بمسيرة الأعظم في التاريخ ليونيل ميسي</p>
+    </footer>
+
+    <!-- السكريبت -->
+    <script>
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        const birthDate = new Date('1987-06-24T00:00:00');
+        const wcDate = new Date('2022-12-18T00:00:00');
+        
+        function getRetirementDate() {
+            const now = new Date();
+            let year = now.getFullYear();
+            let retDate = new Date(`${year}-10-07T00:00:00`);
+            if (now < retDate) {
+                retDate = new Date(`${year - 1}-10-07T00:00:00`);
+            }
+            return retDate;
+        }
+        const retirementDate = getRetirementDate();
+
+        function calculateTimeDifference(targetDate) {
+            const now = new Date();
+            let diff = now - targetDate;
+
+            let seconds = Math.floor(diff / 1000);
+            let minutes = Math.floor(seconds / 60);
+            let hours = Math.floor(minutes / 60);
+            let days = Math.floor(hours / 24);
+            let weeks = Math.floor(days / 7);
+            let months = Math.floor(days / 30.436875);
+            let years = Math.floor(days / 365.25);
+
+            return {
+                years: years,
+                months: months,
+                weeks: weeks,
+                days: days % 365,
+                hours: hours % 24,
+                minutes: minutes % 60,
+                seconds: seconds % 60
+            };
+        }
+
+        function renderCounter(elementId, data, labels) {
+            const container = document.getElementById(elementId);
+            container.innerHTML = '';
+            
+            const keys = Object.keys(labels);
+            keys.forEach(key => {
+                const box = document.createElement('div');
+                box.className = 'liquid-glass p-4 rounded-2xl flex flex-col items-center justify-center border border-white/10 transition-transform duration-300 hover:scale-105';
+                box.innerHTML = `
+                    <span class="text-2xl md:text-3xl font-black text-white mb-1">${data[key]}</span>
+                    <span class="text-xs text-gray-400 uppercase tracking-wider">${labels[key]}</span>
+                `;
+                container.appendChild(box);
+            });
+        }
+
+        function updateCounters() {
+            const ageData = calculateTimeDifference(birthDate);
+            renderCounter('age-counter', 
+                { years: ageData.years, months: ageData.months, weeks: ageData.weeks, days: ageData.days, hours: ageData.hours, minutes: ageData.minutes },
+                { years: 'سنوات', months: 'شهور', weeks: 'أسابيع', days: 'أيام', hours: 'ساعات', minutes: 'دقائق' }
+            );
+
+            const wcData = calculateTimeDifference(wcDate);
+            renderCounter('wc-counter', 
+                { years: wcData.years, months: wcData.months, weeks: wcData.weeks, days: wcData.days, hours: wcData.hours, minutes: wcData.minutes },
+                { years: 'سنوات', months: 'شهور', weeks: 'أسابيع', days: 'أيام', hours: 'ساعات', minutes: 'دقائق' }
+            );
+
+            const retData = calculateTimeDifference(retirementDate);
+            renderCounter('retirement-counter', 
+                { years: retData.years, months: retData.months, weeks: retData.weeks, days: retData.days, hours: retData.hours, minutes: retData.minutes },
+                { years: 'سنوات', months: 'شهور', weeks: 'أسابيع', days: 'أيام', hours: 'ساعات', minutes: 'دقائق' }
+            );
+        }
+
+        setInterval(updateCounters, 1000);
+        updateCounters();
+    </script>
+</body>
+</html>
